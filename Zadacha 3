@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int i=1,n=0;
+    double x;
+    cin >> x;
+    double s = 0, eps = 0.001, an=x;
+    while(abs(an)>eps) {
+        s +=2 * an;
+        i++;
+        an = an * (x * x *(2*i-3))/(2*i-1);
+    }cout << s;
+}
