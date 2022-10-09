@@ -1,0 +1,22 @@
+#include "pt4.h"
+#include "fstream"
+using namespace std;
+
+void Solve()
+{
+    Task("TextFile7");
+    ifstream f;
+    f.open("c.num");
+    int x, y = 0;
+    int i = 0;
+    if (f) {
+        while (!f.eof()) {
+            f >> x;
+            i++;
+            if (i % 2 != 0)
+                y += x;
+        }
+    }
+    pt << y;
+    f.close();
+}
